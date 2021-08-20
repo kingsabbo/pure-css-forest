@@ -1,0 +1,756 @@
+:root {
+  --white: #f2e9e4;
+  --back: #c9ada7;
+  --middle: #9a8c98;
+  --front: #4a4e69;
+  --front2: #22223b;
+}
+
+html, 
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--white);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.canvas {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 97.5vh;
+  height: 97.5vh;
+  border-radius: 50%;
+  place-items: center;
+}
+
+.back-ground0 {
+  position: absolute;
+  width: 130vh;
+  height: 30vh;
+  top: 54vh;
+  left: -10vh;
+  transform: rotate(4deg);
+  background-color: var(--back);
+}
+.back-ground1 {
+  position: absolute;
+  width: 100vh;
+  height: 60vh;
+  top: 48vh;
+  left: -12vh;
+  border-radius: 125vh 15vh 0vh 0vh;
+  transform: rotate(28deg);
+  background-color: var(--back);
+}
+.back-ground2 {
+  position: absolute;
+  width: 70vh;
+  height: 25vh;
+  top: 45vh;
+  left: 55vh;
+  border-radius: 170vh 0vh 0vh 0vh;
+  transform: rotate(-9deg);
+  background-color: var(--back);
+}
+.back-ground3 {
+  position: absolute;
+  width: 5vh;
+  height: 10vh;
+  top: 48vh;
+  left: 45vh;
+  border-radius: 50vh;
+  transform: rotate(-75deg);
+  background-color: var(--back);
+}
+
+.back-tree {
+  position: absolute;
+  width: 4vh;
+  height: 52vh;
+  top: 0vh;
+  left: 35vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(25deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--back);
+}
+.back-branch {
+  position: absolute;
+  width: 2vh;
+  height: 24vh;
+  top: 14vh;
+  left: 38vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(45deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--back);
+}
+
+.back-leaves {
+  animation: bounce 2s infinite alternate-reverse;
+}
+
+.leaves0 {
+  position: absolute;
+  width: 30vh;
+  height: 40vh;
+  top: -12vh;
+  left: 26vh;
+  transform: rotate(-25deg);
+  border-radius: 50vh 50vh 75vh 75vh;
+  background-color: var(--back);
+}
+.leaves1 {
+  position: absolute;
+  width: 30vh;
+  height: 30vh;
+  top: 0vh;
+  left: 6vh;
+  transform: rotate(-25deg);
+  border-radius: 50vh 50vh 75vh 75vh;
+  background-color: var(--back);
+}
+.leaves2 {
+  position: absolute;
+  width: 40vh;
+  height: 30vh;
+  top: 0vh;
+  left: 43vh;
+  border-radius: 50vh 50vh 75vh 75vh;
+  background-color: var(--back);
+}
+.leaves3 {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  top: 16vh;
+  left: 5vh;
+  transform: rotate(20deg);
+  border-radius: 75vh 50vh 75vh 50vh;
+  background-color: var(--back);
+}
+.leaves4 {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  top: 18vh;
+  left: 28vh;
+  transform: rotate(20deg);
+  border-radius: 75vh 50vh 75vh 50vh;
+  background-color: var(--back);
+}
+.leaves5 {
+  position: absolute;
+  width: 14vh;
+  height: 13vh;
+  top: 12vh;
+  left: 78vh;
+  transform: rotate(20deg);
+  border-radius: 75vh 50vh 75vh 50vh;
+  background-color: var(--back);
+}
+
+.back-grass1 {
+  position: absolute;
+  width: .5vh;
+  height: 7vh;
+  top: 47vh;
+  left: 7vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(15deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--back);
+  animation: sway2 7s infinite alternate-reverse;
+}
+.back-grass2 {
+  position: absolute;
+  width: .5vh;
+  height: 5vh;
+  top: 48vh;
+  left: 7vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(40deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--back);
+  animation: sway2 5s infinite ease-in-out;
+}
+
+.middle-ground0 {
+  position: absolute;
+  overflow: hidden;
+  width: 50vh;
+  height: 55vh;
+  top: 50vh;
+  left: -5vh;
+  transform: rotate(-30deg) skew(10deg, 5deg);
+  border-radius: 0vh 75vh 0vh 50vh;
+  background-color: var(--middle);
+}
+.middle-ground1 {
+  position: absolute;
+  width: 80vh;
+  height: 45vh;
+  top: 60vh;
+  left: 35vh;
+  transform: rotate(-10deg);
+  border-radius: 35vh 55vh 50vh 50vh;
+  background-color: var(--middle);
+}
+
+.middle-grass1 {
+  position: absolute;
+  width: 1vh;
+  height: 10vh;
+  top: 61vh;
+  left: 40vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(15deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+  animation: sway 3s infinite ease-in-out;
+}
+.middle-grass2 {
+  position: absolute;
+  width: 1vh;
+  height: 10vh;
+  top: 61vh;
+  left: 40vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(40deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+  animation: sway 5s infinite ease-in-out;
+}
+
+.middle-mushroom-stem {
+  position: absolute;
+  width: 3vh;
+  height: 8vh;
+  top: 55vh;
+  left: 71vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(20deg) skew(7deg, 30deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-mushroom-cap {
+  position: absolute;
+  width: 7vh;
+  height: 5vh;
+  top: 52vh;
+  left: 70vh;
+  border-radius: 35vh 45vh 5vh 5vh;
+  transform: rotate(5deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+  animation: boing 3s infinite ease-in-out;
+}
+
+.middle-1-tree0 {
+  position: absolute;
+  width: 12vh;
+  height: 50vh;
+  top: 19vh;
+  left: 16vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(33deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-1-tree0:before {
+  content: "";
+  position: absolute;
+  width: 3vh;
+  height: 20vh;
+  top: 30vh;
+  left: -5vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(35deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-1-tree0:after {
+  content: "";
+  position: absolute;
+  width: 5vh;
+  height: 40vh;
+  top: -28vh;
+  left: 6vh;
+  border-radius: 50vh;
+  transform: rotate(41deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+
+.middle-1-tree1 {
+  position: absolute;
+  width: 5vh;
+  height: 25vh;
+  top: 1vh;
+  left: 27vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(0deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-1-tree1:before {
+  content: "";
+  position: absolute;
+  width: 3vh;
+  height: 25vh;
+  top: 20vh;
+  left: -10vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(25deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-1-tree1:after {
+  content: "";
+  position: absolute;
+  width: 1vh;
+  height: 30vh;
+  top: 0vh;
+  left: -3vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(65deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+
+.middle-1-tree2 {
+  position: absolute;
+  width: 5vh;
+  height: 25vh;
+  top: 44vh;
+  left: 27vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(20deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+
+.middle-2-tree0 {
+  position: absolute;
+  width: 8vh;
+  height: 35vh;
+  top: 44vh;
+  left: 53vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(20deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-2-tree0:before {
+  content: "";
+  position: absolute;
+  width: 6.5vh;
+  height: 38vh;
+  top: -22vh;
+  left: 1vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(10deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-2-tree0:after {
+  content: "";
+  position: absolute;
+  width: 3vh;
+  height: 68vh;
+  top: -44vh;
+  left: 2vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(38deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+
+.middle-branch0 {
+  position: absolute;
+  width: 2vh;
+  height: 8vh;
+  top: 30vh;
+  left: 64vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(80deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-branch0:before {
+  content: "";
+  position: absolute;
+  width: 1.5vh;
+  height: 14vh;
+  top: -11vh;
+  left: 0vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(47deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+.middle-branch0:after {
+  content: "";
+  position: absolute;
+  width: 1vh;
+  height: 16vh;
+  top: -22vh;
+  left: 5vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(50deg) skew(21deg, 11deg);
+  transform-origin: left bottom;
+  background-color: var(--middle);
+}
+
+.middle-leaves {
+  animation: bounce 4s infinite ease-in-out;
+}
+
+.middle-leaves0 {
+  position: absolute;
+  width: 17vh;
+  height: 10vh;
+  top: 12vh;
+  left: 7vh;
+  border-radius: 50vh 50vh 70vh 80vh;
+  background-color: var(--middle);
+}
+.middle-leaves0:before {
+  content: "";
+  position: absolute;
+  width: 9vh;
+  height: 10vh;
+  top: 3vh;
+  left: 5vh;
+  border-radius: 50vh 50vh 70vh 80vh;
+  background-color: var(--middle);
+}
+.middle-leaves0:after {
+  content: "";
+  position: absolute;
+  width: 100vh;
+  height: 15vh;
+  top: -12vh;
+  left: -10vh;
+  border-radius: 50vh 50vh 50vh 50vh;
+  background-color: var(--middle);
+}
+
+.middle-leaves1 {
+  position: absolute;
+  width: 20vh;
+  height: 15vh;
+  top: 4vh;
+  left: 27vh;
+  border-radius: 85vh 50vh 70vh 80vh;
+  background-color: var(--middle);
+}
+.middle-leaves1:before {
+  content: "";
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  top: 6vh;
+  left: 15vh;
+  border-radius: 50vh 50vh 70vh 80vh;
+  background-color: var(--middle);
+}
+.middle-leaves1:after {
+  content: "";
+  position: absolute;
+  width: 32vh;
+  height: 17vh;
+  top: 0vh;
+  left: 25vh;
+  transform: rotate(-10deg);
+  border-radius: 50vh 50vh 70vh 120vh;
+  background-color: var(--middle);
+}
+
+.middle-leaves2 {
+  position: absolute;
+  width: 14vh;
+  height: 10vh;
+  top: 14vh;
+  left: 60vh;
+  border-radius: 50vh 50vh 70vh 80vh;
+  background-color: var(--middle);
+}
+.middle-leaves2:before {
+  content: "";
+  position: absolute;
+  width: 14vh;
+  height: 10vh;
+  top: -3vh;
+  left: 20vh;
+  border-radius: 50vh 50vh 70vh 80vh;
+  background-color: var(--middle);
+}
+
+.bird {
+  animation: fly 4s infinite ease-in-out;
+}
+
+.birdbody {
+  position: absolute;
+  width: 5vh;
+  height: 3vh;
+  top: 33vh;
+  left: 84vh;
+  border-radius: 10vh 50vh 50vh 100vh;
+  background-color: var(--middle);
+}
+.birdbody:before {
+  content: "";
+  position: absolute;
+  width: 2vh;
+  height: 2vh;
+  top: -1vh;
+  left: 3vh;
+  border-radius: 50vh;
+  background-color: var(--middle);
+}
+.birdbody:after {
+  content: "";
+  position: absolute;
+  width: 2vh;
+  height: 2vh;
+  clip-path: polygon(20% 18%, 21% 48%, 98% 41%);
+  top: -1vh;
+  left: 4vh;
+  background-color: var(--middle);
+}
+
+.front-ground0 {
+  position: absolute;
+  width: 35vh;
+  height: 25vh;
+  top: 68vh;
+  left: 6vh;
+  border-radius: 125px 50px 10px 10px;
+  transform: rotate(25deg);
+  background-color: var(--front);
+}
+.front-ground0:before {
+  content: "";
+  position: absolute;
+  width: 35vh;
+  height: 25vh;
+  top: -5vh; 
+  left: 23vh;
+  border-radius: 75px 50px 10px 10px;
+  transform: rotate(-15deg);
+  background-color: var(--front);
+}
+.front-ground0:after {
+  content: "";
+  position: absolute;
+  width: 17vh;
+  height: 55vh;
+  top: -17vh;
+  left: 59vh;
+  border-radius: 125px 50px 40px 40px;
+  transform: rotate(-25deg);
+  background-color: var(--front);
+}
+
+.front-ground1 {
+  position: absolute;
+  width: 28vh;
+  height: 25vh;
+  top: 69vh;
+  left: 75vh;
+  transform: rotate(-15deg);
+  border-radius: 100px;
+  background-color: var(--front);
+}
+.front-ground1:after {
+  content: "";
+  position: absolute;
+  width: 25vh;
+  height: 25vh;
+  top: -19vh;
+  left: -75vh;
+  border-radius: 30px;
+  transform: rotate(-15deg);
+  background-color: var(--front);
+}
+
+.front-ground1:before {
+  content: "";
+  position: absolute;
+  width: 45vh;
+  height: 25vh;
+  top: 1vh;
+  left: -25vh;
+  border-radius: 30px;
+  transform: rotate(8deg);
+  background-color: var(--front);
+}
+
+.front-mush1 {
+  animation: boing2 4s infinite ease-in-out;
+}
+
+.front-mushroom1 { /* stem */
+  position: absolute;
+  width: 2vh;
+  height: 6vh;
+  top: 65vh;
+  left: 8vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(0deg) skew(7deg, 30deg);
+  transform-origin: left bottom;
+  background-color: var(--front);
+}
+.front-mushroom1:after { /* cap */
+  content: "";
+  position: absolute;
+  width: 6vh;
+  height: 3vh;
+  top: 0vh;
+  left: -2vh;
+  border-radius: 50vh 50vh 5vh 5vh;
+  transform: rotate(-20deg) skew(-30deg, -7deg);
+  transform-origin: left bottom;
+  background-color: var(--front);
+}
+
+.front-mush2 {
+  animation: boing2 3s infinite reverse;
+}
+
+.front-mushroom2 { /* stem */
+  position: absolute;
+  width: 4vh;
+  height: 10vh;
+  top: 68vh;
+  left: 55vh;
+  border-radius: 0vh 50vh;
+  transform: rotate(10deg) skew(7deg, 30deg);
+  transform-origin: left bottom;
+  background-color: var(--front);
+}
+.front-mushroom2:before {
+  content: "";
+  position: absolute;
+  width: 12vh;
+  height: 4vh;
+  top: 1vh;
+  left: -3vh;
+  border-radius: 50vh 50vh 5vh 5vh;
+  transform: rotate(-30deg) skew(-30deg, -7deg);
+  transform-origin: left bottom;
+  background-color: var(--front);
+}
+
+.front-bush {
+  
+}
+
+.front-leaf1 {
+  position: absolute;
+  width: 4vh;
+  height: 12vh;
+  top: 61vh;
+  left: 78vh;
+  border-radius: 0% 100% 0% 100% / 30% 100% 0% 70%;
+  transform: rotate(-25deg);
+  background-color: var(--front);
+}
+.front-leaf1:after {
+  content: "";
+  position: absolute;
+  top: 5vh;
+  left: 0vh;
+  width: 3vh;
+  height: 8vh;
+  border-radius: 0% 100% 0% 100% / 30% 100% 0% 70%;
+  transform: rotate(-40deg);
+  background-color: var(--front);
+  animation: sway 4s infinite ease-in-out;
+}
+
+.front-leaf2 {
+  position: absolute;
+  width: 4vh;
+  height: 12vh;
+  top: 59vh;
+  left: 83vh;
+  border-radius: 0% 100% 0% 100% / 30% 100% 0% 70%;
+  transform: rotate(25deg);
+  background-color: var(--front);
+}
+.front-leaf2:after {
+  content: "";
+  position: absolute;
+  top: 5vh;
+  left: 4vh;
+  width: 1vh;
+  height: 8vh;
+  border-radius: 0% 100% 0% 100% / 30% 100% 0% 70%;
+  transform: rotate(40deg);
+  background-color: var(--front);
+  animation: sway 4s infinite ease-in-out;
+}
+
+/* 
+
+Chrome only for now
+
+@keyframes bounce {
+  50% { transform: rotate(1deg) translateY(1px); }
+  50% { transform: rotate(-1deg) translateY(1px); }
+}
+
+@keyframes sway {
+  50% { transform: skew(7deg); }
+  50% { transform: skew(-4deg); }
+  50% { transform: skew(0deg); }
+}
+
+@keyframes sway2 {
+  40% { transform: skew(-7deg); }
+  60% { transform: skew(4deg); }
+  90% { transform: skew(0deg); }
+}
+
+@keyframes boing {
+  0% { transform: translateX(0px); }
+  10% { transform: translateX(-1px) rotate(-2deg); }
+  45% { transform: translateY(-1px); }
+  50% { transform: translateY(1px) rotate(2deg); }
+  60% { transform: translateX(-1px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes boing2 {
+  40% {transform: translateY(0px); }
+  45% {transform: translateY(2px); }
+  50% {transform: translateY(0px); }
+  55% {transform: translateY(4px); }
+  60% {transform: translateY(0px); }
+  65% {transform: translateY(1px); }
+  70% {transform: translateY(0px); }
+}
+
+@keyframes fly {
+  0% { transform: translate(0px, 0px); }
+  15% { transform: translate(0px, 0px); }
+  20% { transform: translate(1px, -6px) }
+  25% { transform: translate(0px, -0px); }
+  35% { transform: translate(0px, -0px); }
+  40% { transform: translate(-1px, -5px) }
+  45% { transform: translate(0px, -0px); }
+  100% { transform: translate(0px, 0px); }
+} */
